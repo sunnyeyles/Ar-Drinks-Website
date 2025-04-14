@@ -106,7 +106,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  They're taken to a unique subdomain link—no app install
+                  They&apos;re taken to a unique subdomain link—no app install
                   required.
                 </p>
               </CardContent>
@@ -302,7 +302,7 @@ export default function Home() {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold sm:text-4xl mb-4">
-              Need More Than a Template? We've Got You Covered.
+              Need More Than a Template? We&apos;ve Got You Covered.
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our team of AR specialists and network of award-winning 3D artists

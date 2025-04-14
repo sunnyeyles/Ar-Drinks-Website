@@ -23,7 +23,7 @@ export default function AnimatedSvg({ type, className }: AnimatedSvgProps) {
 
       if (can && particles.length) {
         // Animate can floating
-        const canAnimation = can.animate(
+        can.animate(
           [
             { transform: "translateY(0)" },
             { transform: "translateY(-10px)" },
