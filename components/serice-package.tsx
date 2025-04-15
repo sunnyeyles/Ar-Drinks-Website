@@ -13,7 +13,7 @@ interface ServicePackageProps {
   features: string[];
 }
 
-export default function ServicePackage({
+export function ServicePackage({
   title,
   description,
   features,

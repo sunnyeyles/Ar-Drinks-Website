@@ -19,7 +19,7 @@ interface PricingCardProps {
   popular?: boolean;
 }
 
-export default function PricingCard({
+export function PricingCard({
   title,
   price,
   description,

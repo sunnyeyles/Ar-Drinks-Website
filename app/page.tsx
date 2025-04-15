@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+// import { Footer } from "@/components/footer";
+import { Footer } from "@/components/layout/footer";
 import {
   ArrowRight,
   Scan,
@@ -12,58 +14,21 @@ import {
   Zap,
   Award,
 } from "lucide-react";
-import AnimatedGradientBackground from "@/app/components/animated-gradient-background";
-import AnimatedSvg from "@/app/components/animated-svg";
-import BreakoutScene from "@/app/components/breakout-scene";
-import PricingCard from "@/app/components/pricing-card";
-import ServicePackage from "@/app/components/serice-package";
-import TestimonialCard from "@/app/components/testimonial-scene";
-import SplineScene from "@/app/components/spline-scene";
+import { AnimatedGradientBackground } from "@/components/layout/animations/animated-gradient-background";
+import { AnimatedSvg } from "@/components/animated-svg";
+import { BreakoutScene } from "@/components/layout/animations/breakout-scene";
+import { PricingCard } from "@/components/pricing-card";
+import { ServicePackage } from "@/components/serice-package";
+import { TestimonialCard } from "@/components/testimonial-scene";
+import { SplineScene } from "@/components/spline-scene";
+import { Hero } from "@/components/layout/marketing/hero";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <AnimatedGradientBackground className="absolute inset-0 z-0" />
-        <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-            <div className="space-y-6">
-              <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-none">
-                Beta Access Available
-              </Badge>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                Bring Your Beverage Cans to Life with Augmented Reality
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl">
-                Empower breweries and beverage makers to excite customers with
-                interactive 3D scenes right from their smartphones.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="gap-2">
-                  Request Early Access <ArrowRight className="h-4 w-4" />
-                </Button>
-                <Button size="lg" variant="outline">
-                  See How It Works
-                </Button>
-              </div>
-            </div>
-            <div className="relative h-[400px] lg:h-[500px]">
-              {/* Placeholder for Spline.design scene */}
-              <SplineScene />
-
-              {/* Animated SVG that appears to break out of container */}
-              <div className="absolute -right-16 -bottom-20 w-64 h-64">
-                <AnimatedSvg type="can" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 3D element breaking out of section */}
-        <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
-          <BreakoutScene />
-        </div>
+        <Hero />
       </section>
 
       {/* How It Works Section */}
@@ -479,183 +444,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-muted py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Company</h3>
-              <div className="flex flex-col space-y-2">
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Careers
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Press
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Resources</h3>
-              <div className="flex flex-col space-y-2">
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Documentation
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Help Center
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Tutorials
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Case Studies
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Legal</h3>
-              <div className="flex flex-col space-y-2">
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Cookie Policy
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Stay Updated</h3>
-              <p className="text-muted-foreground">
-                Subscribe to our newsletter for the latest updates and features.
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Your email"
-                  className="max-w-[220px]"
-                />
-                <Button type="submit">Subscribe</Button>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} AR Beverage App. All rights reserved.
-            </p>
-            <div className="flex gap-4">
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <span className="sr-only">Twitter</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
-                >
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <span className="sr-only">Instagram</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                </svg>
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <span className="sr-only">LinkedIn</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect width="4" height="12" x="2" y="9"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

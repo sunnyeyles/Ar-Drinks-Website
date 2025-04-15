@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-export default function BreakoutScene() {
+export function BreakoutScene() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

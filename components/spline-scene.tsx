@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-export default function SplineScene() {
+export function SplineScene() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

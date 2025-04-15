@@ -8,7 +8,7 @@ interface AnimatedGradientBackgroundProps {
   variant?: "primary" | "secondary" | "tertiary";
 }
 
-export default function AnimatedGradientBackground({
+export function AnimatedGradientBackground({
   className,
   variant = "primary",
 }: AnimatedGradientBackgroundProps) {

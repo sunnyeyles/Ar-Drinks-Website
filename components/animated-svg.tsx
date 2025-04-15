@@ -8,7 +8,7 @@ interface AnimatedSvgProps {
   className?: string;
 }
 
-export default function AnimatedSvg({ type, className }: AnimatedSvgProps) {
+export function AnimatedSvg({ type, className }: AnimatedSvgProps) {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {

@@ -8,7 +8,7 @@ interface TestimonialCardProps {
   image: string;
 }
 
-export default function TestimonialCard({
+export function TestimonialCard({
   quote,
   author,
   role,
