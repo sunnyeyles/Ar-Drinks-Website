@@ -1,10 +1,10 @@
-import { AnimatedSvg } from "@/components/animated-svg";
 import { AnimatedGradientBackground } from "@/components/layout/animations/animated-gradient-background";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { SplineScene } from "@/components/spline-scene";
 import { BreakoutScene } from "@/components/layout/animations/breakout-scene";
+import { SplineScene } from "@/components/layout/animations/spline-scene";
+import { AnimatedSvg } from "@/components/layout/animations/animated-svg";
 
 export function Hero() {
   return (

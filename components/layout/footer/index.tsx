@@ -1,7 +1,6 @@
 import { NewsletterForm } from "./newsletter-form";
 import { FooterLinks } from "./footer-links";
 import { SocialLinks } from "./social-links";
-import Link from "next/link";
 
 export function Footer() {
   return (
